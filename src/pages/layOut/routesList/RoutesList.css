@@ -1,0 +1,59 @@
+
+.drop-list.drop-list-top{
+    animation: dropTopAnime .3s ease-in-out;
+}
+.drop-list.drop-list-bottom{
+    animation: dropBottomAnime .3s ease-in-out;
+
+}
+
+
+li:hover .margin-target{
+    animation: listTextAnime .5s ease-in-out;   
+}
+
+li:hover .not-arrow{
+    color: var(--spicealColor);
+}
+
+.margin-blur{
+    transform: translateX(5px)
+}
+
+
+/*********          animations       ***********/
+
+
+
+/*  drop list bottom */
+
+@keyframes dropBottomAnime {
+    0%{
+        height:0;
+        overflow: hidden;
+    }
+    100%{
+       height: 250px ;
+       overflow: visible;
+    }
+}
+
+/* drop list top */
+
+@keyframes dropTopAnime {
+    0%{
+        height:250px;
+        overflow: visible;
+    }
+    100%{
+       height: 0;
+       overflow: hidden;
+    }
+}
+
+/*  listText */
+
+@keyframes listTextAnime {
+    0%{transform: translateX(0px)}
+    100%{transform: translateX(7px)}
+}
