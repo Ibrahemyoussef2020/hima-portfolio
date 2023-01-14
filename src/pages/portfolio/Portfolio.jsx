@@ -21,7 +21,7 @@ import{
   PROJECT,
   PROJECT_CONTAINER,
   PROJECT_FRONT,
-  PROJECT_Back
+  PROJECT_BACK
 } from './project/Project'
 
 
@@ -35,15 +35,11 @@ const Portfolio = () => {
 
   const {web} = useSelector(state => state.filter_Projects)
 
-  const hundle_hover = (text,index)=>{
-    setHover(text)
+  const hundle_web_filter = (web,index)=>{
+    setHover(web)
     setLeft(index)
-  }
-
-  const hundle_web_filter = (web)=>{
     dispatch(addFilter(web))
     setWebType(web)
-    console.log(web);
   }
 
  
@@ -57,8 +53,7 @@ const Portfolio = () => {
         <PROJECT_FILTER>
           {ProjectsFilterList.map((part,index) => 
             <li key={part.text} 
-              onClick={()=>hundle_web_filter(part.text)}
-              onMouseEnter={()=>hundle_hover(part.text,index)}
+              onClick={()=>hundle_web_filter(part.text,index)}
               >          
               <span className={`icon ${hover === part.text ? 'up' : 'dowen'}`}>{part.icon}</span>
               <span className={`text ${hover === part.text ? 'up' : 'dowen'}`}>{part.text}</span>
@@ -72,20 +67,25 @@ const Portfolio = () => {
          .filter(project => webType === 'all' ? project : project.web === webType) 
          .map(project =>         
             <PROJECT key={project.title}
-              onMouseEnter={()=> setOpen(project.title)}
-              onMouseLeave={()=> setOpen('')}
+              onMouseEnter={()=>setOpen(project.title)}
+              onMouseLeave={()=>setOpen('')}
             >
                 <PROJECT_FRONT 
-                  className={open === project.title ? 'open' : 'close'}
-                >                    
-                  <img src={`images/projects-img/${project.title}-front.jpg`}/>
+                  className={open === project.title ? 'close' : 'open'}
+                >            
+                <ul>
+                  <li><h4>project : {project.title}</h4></li>
+                  <li><BsBoxArrowUpRight onClick={()=>go_to_Link(project.link)}/></li>  
+                { project.tools.map(tool =>
+                  <li key={tool}>{tool}</li>  
+                )} 
+                </ul>                 
                 </PROJECT_FRONT>
 
-                <PROJECT_Back>
+                <PROJECT_BACK>
                     <img src={`images/projects-img/${project.title}-back.jpg`}/>
-                    <div></div>
-                    <BsBoxArrowUpRight onClick={()=>go_to_Link(project.link)}/>
-                </PROJECT_Back>
+                    <div></div>                  
+                </PROJECT_BACK>
             </PROJECT>
         )}
       </PROJECT_CONTAINER>

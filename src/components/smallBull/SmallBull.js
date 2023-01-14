@@ -1,31 +1,26 @@
 import styled from "styled-components";
 
-const SmallBullStyle = styled.div`
-width: 50px;
-height:50px;
+const SMALL_BULL = styled.div`
+width:70px;
+height:70px;
+padding:0;
 border-radius: 50%;
 display: flex;
 justify-content: center;
 align-items: center;
-font-size:1.3rem;
-box-shadow:1px 1px 10px var(--spicealColor) , -2px -2px 10px var(--spicealColor);
+font-size:2rem;
 cursor: pointer;
 transition: transform .5s ease-in-out;
-
-box-shadow:1px 1px 10px var(--spicealColor) , -2px -2px 20px var(--spicealColor);
-transform:perspective(500px) translateZ(50px)rotateX(57deg);
-
+border:1px solid var(--spicealColor);
+box-shadow:0 0 8px 0px var(--spicealColor);
+transition:.1s;
+& > svg{
+    fill:var(--spicealColor);
+    transform:scale(1.1,1.1)
+} /* translateX(-5deg) */
 &:hover{
-    box-shadow:1px 1px 10px var(--spicealColor) , -2px -2px 20px var(--spicealColor);
-    transform:perspective(500px) translateZ(50px)rotateX(-20deg);
+    transform:perspective(500px)translate3d(-5px,-5px,50px)!important;
+    box-shadow:0 0 15px 0px var(--spicealColor);
 }
 `
-
-const SMALL_BULL = (props)=>{
-    return <SmallBullStyle {...props}
-    >
-            {props.children}
-    </SmallBullStyle>
-}
-
 export default SMALL_BULL

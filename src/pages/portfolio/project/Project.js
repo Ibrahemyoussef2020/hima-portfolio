@@ -1,12 +1,6 @@
 import styled from "styled-components";
 
-export const Hr = styled.hr`
-width: 90%;
-padding: 0.5px;
-margin: 3rem auto;
-border: none;
-background: var(--spicealColor);
-`
+/************************ Project filter *********************/ 
 
 export const SELECT_BULL = styled.div`
 position: absolute;
@@ -46,7 +40,6 @@ transition: left .5s ease-in-out;
     z-index: -1;
 }
 `
-/************************ Project filter *********************/ 
 export const PROJECT_FILTER_CONTAINER = styled.div`
 position:relative;
 width:300px;
@@ -92,26 +85,49 @@ opacity: 0;
 }
 
 `
+export const Hr = styled.hr`
+width: 90%;
+padding: 0.5px;
+margin: 3rem auto;
+border: none;
+background: var(--spicealColor);
+`
+
+/******************** PROJECT ************************** */
+
 
 export const PROJECT_FRONT = styled.section.attrs({
 className:'front clicked'
-})`
+})
+`
+& ul{
+    height: 100%;
+    padding-top:.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+    gap:.5rem;
+    background: var(--homebg);
+    opacity:.5;
+
+    & svg {
+        position: absolute;
+        top:1rem;
+        left: 50%;
+        transform: translatex(-50%);
+        font-size:2rem;
+        font-weight:bold;
+        fill:var(--spicealColor);
+        z-index:5;
+    }
+}
 z-index:2;
 `
-export const PROJECT_Back = styled.section.attrs({
+export const PROJECT_BACK = styled.section.attrs({
 className:'back clicked',
 })`
 possion : relative;
-& svg {
-    position: absolute;
-    top:50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    font-size:2rem;
-    font-weight:bold;
-    fill:var(--spicealColor);
-    z-index:5;
-}
 
 & div {
     position:absolute;
@@ -119,20 +135,18 @@ possion : relative;
     left:0;
     height:100%;
     width:100%;
-    border-radius:50%;
     z-index:5;
     background:var(--homebg);
     opacity:.6;
     }
 z-index:1;
 `
-/******************** PROJECT ************************** */
 export const PROJECT = styled.div`
 position:relative;
 width:250px;
 height:250px;
 margin-top:1rem;
-border-radius:50%;
+border-radius:15px;
 perspective:1000px;
 box-shadow: 1px 1px 10px var(--spicealColor) ,-2px -2px 10px var(--spicealColor);
 transition: all 2.5s ease-in-out;
@@ -142,22 +156,22 @@ top:0;
 left:0;
 height:100%;
 width:100%;
-border-radius:50%;
+border-radius:15px;
 }
 &  .open{
     transition: transform 1.2s ease-in-out;
-    transform: rotateY(-180deg);
+    transform:translateY(-100%);
     transform-origin: top left;
 }
 & .close{
     transition: transform 1.2s ease-in-out;
-    transform: rotateY(0deg);
+    transform:translateY(0px);
     transform-origin: top left;
 }
 & img{
     width:100%;
     height:100%;
-    border-radius:50%;
+    border-radius:15px;
 }
 `
 
@@ -170,9 +184,10 @@ justify-content: space-around;
 gap: 1rem;
 flex-wrap: wrap;
 
-& > div:nth-child(odd){
-
+& * {
+    overflow:hidden !important;
 }
+
 `
 
 

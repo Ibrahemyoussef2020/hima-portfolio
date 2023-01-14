@@ -3,6 +3,7 @@ import { Outlet } from 'react-router-dom'
 import Loading from '../loading'
 import RoutesList from './routesList'
 import ThemesList from './themesList'
+import Footer from './footer/Footer'
 
 import './LayOut.css'
 
@@ -14,7 +15,7 @@ const LayOut = () => {
     const [scale , setScale] = useState(true)
   
  useEffect(()=>{
-  setTimeout(()=> setLoading(false),5000)
+  setTimeout(()=> setLoading(false),1000)
  })
 
     const Target_Component = loading ? <Loading /> : 
@@ -32,9 +33,16 @@ const LayOut = () => {
             routesTranslate={routesTranslate}
         />
         <Outlet/>
+        <Footer>
+            CREATED BY <span className='spiceal '>IBRAHIM YOUSSEF MOHAMMED</span> © 2023
+        </Footer>
     </main>
 
-    return Target_Component 
+    return (
+        <>
+        {Target_Component }
+        </>
+    )
 }
 
 export default LayOut

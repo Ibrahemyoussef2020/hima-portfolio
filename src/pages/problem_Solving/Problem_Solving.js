@@ -31,6 +31,7 @@ perspective: 1000px;
     font-weight:900;
     font-size:6rem;
     text-shadow:5px 1px 1px #000, 2px 3px 1px;
+    font-family:Arial, tahuma, sans-serif;
 }
 
 & img{

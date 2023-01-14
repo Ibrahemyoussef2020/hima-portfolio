@@ -25,18 +25,12 @@ const themesColor = [
     },
     {
       subject:'mode',
-      bg:t.darkBlack,
-      bg2:t.lightBlack,
-      color:t.brightWhite,
-      color2:t.offWhite,
+      color:'dark-mode',
       icon:<WiMoonWaningGibbous5 fill='#000' className='clicked'/>
     },
     {
       subject:'mode',
-      bg:t.brightWhite,
-      bg2:t.offWhite,
-      color:t.darkBlack,
-      color2:t.lightBlack,
+      color:'light-mode',
       icon:<BsFillSunFill fill='#fff' className='clicked'/>
     },
 ]

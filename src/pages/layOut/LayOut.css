@@ -1,12 +1,14 @@
 main{
     background: var(--bg);
     height: 100%;
-    min-height: 100vh;
-    transition: transform .5s linear;
-    transform-origin: top right;
-    perspective: 1000px;
+    min-height: 100vh; 
+    width: 100%;  
     position: relative;
+    transition:width .3s ease-in-out;
+    transform-origin: top right;
+    transform-style: preserve-3d;
     overflow: hidden;
+    perspective: 1000px;
 }
 
 main .latOut{
@@ -29,7 +31,7 @@ main .latOut{
 }
 
 .animeMove{
-    animation: navigate .5s linear;
+    animation: navigate 1s linear;
 }
 
 
@@ -38,8 +40,16 @@ main .latOut{
         transform: rotatey(0deg); 
         background: var(--bg);
     }
+    25%{
+        transform: rotatey(90deg) ;
+        background:var(--homebg);
+    }
     50%{
-        transform: rotatey(70deg) ;
+        transform: rotatey(180deg) ;
+        background:var(--homebg);
+    }
+    75%{
+        transform: rotatey(90deg) ;
         background:var(--homebg);
     }
 

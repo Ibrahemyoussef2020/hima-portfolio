@@ -1,75 +1,88 @@
 import styled,{keyframes} from "styled-components";
 
-/****** Home ******/
+/****** HOME ******/
 
-const Home_style = styled.div`
-display:'flex';
-flex-direction:'column';
-justify-content:'center';
-align-items:'center';
-padding:calc(var(--fixedTop) + 100px) .5rem 0 .5rem;
+export const HOME = styled.div.attrs({
+    className:`page home`,
+})`
+padding-top:calc(var(--fixedTop) + 50px);
+margin:0 auto;
 background: var(--homebg);
 transform-origin: bottom center;
-transition:transform 1s ease-in-out ;
-`
+transition:transform 1s ease-in-out;
 
-export const Home_ = (props)=>{
-    return <Home_style {...props} className={`page Home ${props.className}`}>
-        {props.children}
-    </Home_style>
+& > div{
+width:85%;    
+min-height:calc(100vh - calc(var(--fixedTop) + 50px));
+margin:0 auto;    
+display:flex;
+justify-content:center;
+align-items:center;
+align-items:center;
+    & > *{
+        flex:1
+    }
 }
 
-/****** Home Img ******/
+& .home-img{
+    max-width:40%;
+}
 
-const Home_Img_style = styled.section`
+@media (max-width:800px){
+    padding-top:calc(var(--fixedTop) + 100px);
+
+    & > div {
+        flex-direction:column;
+        justify-content:flex-start;
+    }
+}
+
+@media (max-width:576px){
+    & .home-img{
+        display:none;
+    }
+}
+`
+
+/****** HOME Img ******/
+
+export const HOME_IMG = styled.section.attrs({
+    className:`home-img`
+})`
 display:flex;
 justify-content:center;
 align-items:center;
 & > div{
-    height:250px;
-    width:250px;
-    padding:15px;
+    height:300px;
+    min-height:300px;
+    width: 300px;
+    min-width: 300px;
+    padding:1rem;
     border:1px solid var(--homebg);
     background:var(--bg);
 }
 `
 
-export const Home_Img_ = (props)=>{
-    return <Home_Img_style {...props} className='home-img'>
-        {props.children}
-    </Home_Img_style>
-}
+/****** HOME Content ******/
 
-/****** Home Content ******/
+export const HOME_CONTENT= styled.section`
+display:flex;
+justify-content:center;
+flex-direction:column;
 
-const Home_Content_Style = styled.section`
-display:'flex';
-justify-content:'center';
-align-items:'center';
-padding:.5rem 0 .5rem 2rem ;
-& > * {
-    margin-top:1.5rem
+& > *:not(h3) {
+    margin-top:1.3rem
 }
+ 
 `
-export const Home_Content_ = (props)=>{
-    return <Home_Content_Style {...props}>
-        {props.children}
-    </Home_Content_Style>
-}
 
+/******** ANIMATED  TITLE   *******/
 
-const Animation_Title_Container_Style = styled.div`
+export const ANIMATION_TITLE_CONTAINER = styled.div`
 overflow:hidden;
-height:42px;
+height:47px;
 position:relative;
 `
-export const Animation_Title_Container = (props)=>{
-    return <Animation_Title_Container_Style {...props} className='spiceal'>
-            {props.children}
-    </Animation_Title_Container_Style>
-}
-
-/*  h1  */
 
 const titleAnime = keyframes` 
   100% {
@@ -78,16 +91,19 @@ const titleAnime = keyframes`
 `
 const TransposeTitle = keyframes`
 100%{
-    top :-64px;
+    top :-87px;
 }
 `
 
-const  Animated_Title_Style = styled.h1`
+export const  ANIMATED_TITLE = styled.h1.attrs({
+    className:'mainTitle Animated_Title'
+})`
 position: absolute;
 top:0;
-left: 0;
+left:0;
 width: 100%;
 height: 100%;
+font-size:2rem;
 animation: ${TransposeTitle} 6s steps(2) infinite;
 
 
@@ -96,6 +112,7 @@ animation: ${TransposeTitle} 6s steps(2) infinite;
     display: block;
     margin 5px auto;
     overflow: hidden;
+    color:var(--spicealColor);
     white-space: nowrap;
 }
 
@@ -109,14 +126,21 @@ height: 100%;
 background: var(--homebg);
 animation: ${titleAnime} 3s steps(22) infinite  ;
 }
-`
 
-export const Animated_Title = (props)=>{
-    return <Animated_Title_Style {...props} className='mainTitle Animated_Title'>
-        {props.children}
-    </Animated_Title_Style>
+@media (max-width:470px){
+    font-size:1.4rem;
 }
 
+`
+/* CONTENT FOOTER */
+
+export const CONTENT_FOOTER = styled.footer`
+padding-bottom:2rem;
+display:flex;
+align-items:center;
+flex-wrap: wrap;
+gap:1rem;
+`
 
 
 

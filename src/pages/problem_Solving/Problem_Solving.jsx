@@ -30,7 +30,8 @@ const Problem_Solving = () => {
         <h4 className='site'>1 - codewars : </h4>
           <a href='https://www.codewars.com/users/%20Ibrahemyoussef2020%20' 
             target="_blank">
-            https://www.codewars.com/users/%20Ibrahemyoussef2020%20
+            Go to : codewars/Ibrahim_Youssef <br/> <br/>
+            <img src='https://www.codewars.com/users/%20Ibrahemyoussef2020%20/badges/large' alt='codewars'/>
           </a>
         </div>
 
@@ -38,7 +39,7 @@ const Problem_Solving = () => {
           <h4 className='site'>2 - jscodebox : </h4>
           <a href='https://jscodebox.com/profile/Ibrahim_Youssef' 
             target="_blank">
-            https://jscodebox.com/profile/Ibrahim_Youssef
+            Go to : jscodebox/Ibrahim_Youssef
           </a>
         </div>
       </div>

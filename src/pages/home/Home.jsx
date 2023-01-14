@@ -1,38 +1,53 @@
 import { useState } from 'react'
 import Loading from '../loading'
+import {Button} from '../../components'
 
 import{
-Home_,
-Home_Img_,
-Home_Content_,
-Animated_Title ,
-Animation_Title_Container
+HOME,
+HOME_IMG,
+HOME_CONTENT,
+ANIMATED_TITLE ,
+CONTENT_FOOTER,
+ANIMATION_TITLE_CONTAINER
 } from './Home'
 
 const Home = () => {
-  return <Home_ >
-      <Home_Img_>
+  return (
+    <HOME>
+      <div className='home-container'>
+      <HOME_IMG>
           <div className='home-img-container circle'>
             <img className='fill circle' src='images/ibrahim.jpg' alt='me'/>
           </div>
-      </Home_Img_>
+      </HOME_IMG>
 
-      <Home_Content_  className='home-content'>
-        <h4>well come !</h4>
-        <h2>I AM</h2>
-        <Animation_Title_Container>
-          <Animated_Title>
-            <span>IBRAHIM_YOUSSEF_MO</span>
-            <span>A FRONTEND_DEVOLEPER</span>
-          </Animated_Title>
-        </Animation_Title_Container> 
+      <HOME_CONTENT>
+        <h3>well come !</h3>
+        <h2>I'M</h2>
+        <ANIMATION_TITLE_CONTAINER>
+          <ANIMATED_TITLE>
+            <span>IBRAHIM YOUSSEF MO</span>
+            <span>A FRONTEND DEVOLEPER</span>
+          </ANIMATED_TITLE>
+        </ANIMATION_TITLE_CONTAINER> 
         <div>
             <p>
               I'm starving to build amazing and beautiful web \ app - sites - games \ with a very - reusable , readble , clean - code. i adore a creative ideas
             </p>
         </div>
-        </Home_Content_>
-    </Home_> 
+        <CONTENT_FOOTER>
+          <Button background='var(--spicealColor)' backgroundLayOut='var(--bg)'>
+            <span>More About Me</span>
+          </Button>
+
+          <Button background='transparent' backgroundLayOut='var(--spicealColor)'>
+            <span>My Portfolio</span>
+          </Button>
+          </CONTENT_FOOTER>
+        </HOME_CONTENT>
+    </div>    
+    </HOME> 
+  )
 }
 
 export default Home

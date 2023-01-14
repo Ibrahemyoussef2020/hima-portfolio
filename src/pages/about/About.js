@@ -3,9 +3,6 @@ import {LARGE_BULL} from '../../components'
 
 export const ABOUT = styled.div`
 padding-top:7rem;
-& h1{
-    text-align:center;
-}
 & hr{
     width:90%;
     padding:.5px;
@@ -81,13 +78,15 @@ transform:rotateY(-28deg)translate(-7px , -3px);
 export const ABOUT_IMG_CONTAINER = (props)=>{
     return <ABOUT_IMG_CONTAINER_Style {...props} className='clicked'>
              <ABOUT_IMG>
-                <img src="images/formal.jpg" alt="Ibrahim"/>
+                <img src="images/formal-progressive.jpeg" alt="Ibrahim"/>
                 <span>CV</span>
              </ABOUT_IMG>
     </ABOUT_IMG_CONTAINER_Style>
 }
 
-/***********  ABOUT_UL ************* */
+/******************** personel-information  ********************/
+
+/*******  ABOUT_UL ****** */
 
 const ABOUT_UL_Style = styled.ul`
 height: 100%;
@@ -111,13 +110,17 @@ justify-content: space-around;
     &:before{
         content:'';
         position:absolute;
-        left:0;
-        bottom:0;
-        width:10px;
+        left:10px;
+        top:0;
+        width:5px;
+        height:20px;
+        background:var(--spicealColor);
+        /*
         border-top: 10px solid transparent;
         border-bottom: 10px solid transparent;
         border-left: 10px solid var(--spicealColor);
         border-right: 10px solid transparent;
+        */
     }
 }
 `
@@ -126,8 +129,6 @@ export const ABOUT_UL = (props)=>{
             {props.children}
     </ABOUT_UL_Style>
 }
-
-/******************** personel-information  ********************/
 
 const Personel_Information_Style = styled.section`
 margin-top:2rem;
@@ -141,6 +142,10 @@ flex-wrap:wrap;
     height:100%;
     width:100%;
 }
+& span{
+   line-height: 1.6rem;
+ }
+
 @media (max-width: 700px) {
     flex-direction: column;
   }
@@ -154,7 +159,7 @@ export const PERSONEL_INFORMATION = (props)=>{
 
 /********************skills*****************************/
 
-const skillsArray = ['HTML','B_STRAP','CSS','SASS','JS','TS','JQUERY','REACT','REDUX','NEXTJS']
+const skillsArray = ['html','bootstrap','css','sass','javscript','typescript','jquery','react','redux','nextjs']
 
 const Skills_Style = styled.section`
 width: 100%;
@@ -167,6 +172,8 @@ align-content: center;
 
 & > div{
     margin:40px 10px;
+    font-size:14px;
+    text-transform: capitalize;
 }
 
 & > div:nth-child(odd){

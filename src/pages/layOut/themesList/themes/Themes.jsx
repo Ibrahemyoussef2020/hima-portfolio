@@ -14,43 +14,43 @@ ModesLi
 } from './Themes'
 
 const ThemesList = () => {
-  const [mode,setMode] = useState({bg:t.darkBlack,color:t.brightWhite})
-  const [theme,setTheme] = useState(t.aqua)
+  const [mode,setMode] = useState(localStorage.getItem("mode") || 'dark-mode')
+  const [theme,setTheme] = useState(localStorage.getItem("theme") || t.aqua)
 
   useEffect(()=>{
-    const TargetTheme = getComputedStyle(document.documentElement).getPropertyValue('--spicealColor')
-  },[])
+    document.documentElement.style.setProperty('--spicealColor',localStorage.getItem("theme"))
+    document.body.classList = localStorage.getItem('mode');
 
-  const setTargetTheme = (subject,color,bg,color2,bg2)=>{
+    const TargetTheme = getComputedStyle(document.documentElement).getPropertyValue('--spicealColor')
+
+  },[localStorage.getItem("theme") , localStorage.getItem('mode')])
+
+  const setTargetTheme = (subject,color)=>{
     if(subject === 'theme'){
-      document.documentElement.style.setProperty('--spicealColor',color)
-      setTheme(color)
+      localStorage.setItem('theme',color)
+      setTheme(localStorage.getItem("theme"))   
     }else{
-      document.documentElement.style.setProperty('--homebg',bg)
-      document.documentElement.style.setProperty('--normalColor',color)
-      document.documentElement.style.setProperty('--bg',bg2)
-      document.documentElement.style.setProperty('--weakColor',color2)
-      setMode({bg:bg,color:color})
+      localStorage.setItem('mode',color)
+      setMode(localStorage.getItem('mode'))
     }
   }
-
 
   return (
     <ThemesListContainer>
       <ThemesListUl>{      
         
         themesColor
-        .filter(li=> li.color!==theme && li.color!==mode.color)
+        .filter(li=> li.color!= theme && li.color!= mode)
         .map(theme =>{
          return theme.subject === 'theme' ? 
             <ThemesLi key={theme.color}>
-            <span onClick={()=>setTargetTheme('theme',theme.color,)}>
+            <span onClick={()=>setTargetTheme('theme',theme.color)}>
               <GiButterfly fill={theme.color}/> 
             </span> 
             </ThemesLi> :
 
             <ModesLi key={theme.color}>
-              <span onClick={()=>setTargetTheme('mode',theme.color,theme.bg,theme.color2,theme.bg2,)}>
+              <span onClick={()=>setTargetTheme('mode',theme.color)}>
                 {theme.icon}
               </span>
             </ModesLi>

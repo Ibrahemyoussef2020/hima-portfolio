@@ -1,5 +1,4 @@
 import {CgHomeAlt,CgProfile,CgEye,CgMail,CgLockUnlock} from "react-icons/cg"
-import {GiJeweledChalice} from 'react-icons/gi'
 import {IoMdFlower} from 'react-icons/io'
 import {BsBoxArrowInDownRight,BsBoxArrowInUpLeft} from 'react-icons/bs'
 
@@ -28,15 +27,17 @@ const RoutesList = (props) => {
  }
 
  const handle_navigation = (nav)=>{
+  setDropState('drop-list-top')
   setActive(nav)
   setAnimeMove('animeMove')
+  setRoutesTranslate(false)
+
   setTimeout(()=>{
     navigate(`/${nav!=='home' ? nav:''}`)
-  },300)
+  },100)
   setTimeout(()=>{
     setAnimeMove('')
-    setDropState('drop-list-top')
-  },500)
+  },2000)
 }
 
  const routesList = [
