@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import Loading from '../loading'
 import {Button} from '../../components'
+import go_to_Cv ,{go_to_Link} from '../../cv/Cv_Link'
 
 import{
 HOME,
@@ -36,12 +37,17 @@ const Home = () => {
             </p>
         </div>
         <CONTENT_FOOTER>
-          <Button background='var(--spicealColor)' backgroundLayOut='var(--bg)'>
-            <span>More About Me</span>
+          <Button 
+            onClick={go_to_Cv}
+            background='var(--spicealColor)' 
+            backgroundLayOut='var(--bg)'>
+            <span>My cv</span>
           </Button>
-
-          <Button background='transparent' backgroundLayOut='var(--spicealColor)'>
-            <span>My Portfolio</span>
+          <Button
+            onClick={()=>go_to_Link('https://www.linkedin.com/in/ibrahim-youssef-2a65b1261')} 
+            background='transparent' 
+            backgroundLayOut='var(--spicealColor)'>
+            <span>My Linked In</span>
           </Button>
           </CONTENT_FOOTER>
         </HOME_CONTENT>

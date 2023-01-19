@@ -15,7 +15,7 @@ const LayOut = () => {
     const [scale , setScale] = useState(true)
   
  useEffect(()=>{
-  setTimeout(()=> setLoading(false),1000)
+  setTimeout(()=> setLoading(false),6000)
  })
 
     const Target_Component = loading ? <Loading /> : 

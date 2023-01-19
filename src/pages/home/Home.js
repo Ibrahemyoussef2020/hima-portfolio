@@ -34,6 +34,7 @@ align-items:center;
     & > div {
         flex-direction:column;
         justify-content:flex-start;
+        padding-bottom: 3rem;
     }
 }
 

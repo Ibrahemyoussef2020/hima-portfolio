@@ -35,7 +35,6 @@ animation: ${Hima_anime} 5s linear infinite;
 export const LOADING_CONTAINER = styled.div`
 height: 100%;
 min-height:100vh;
-padding-top:10rem;
 display: flex;
 justify-content: center;
 align-items: center;
