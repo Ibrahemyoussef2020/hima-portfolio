@@ -83,7 +83,7 @@ const Portfolio = () => {
                 </PROJECT_FRONT>
 
                 <PROJECT_BACK>
-                    <img src={`images/projects-img/${project.title}-back.jpg`}/>
+                    <img src={`images/projects-img/${project.title}-front.webp`}/>
                     <div></div>                  
                 </PROJECT_BACK>
             </PROJECT>

@@ -96,7 +96,7 @@ background: var(--spicealColor);
 /******************** PROJECT ************************** */
 
 
-export const PROJECT_FRONT = styled.section.attrs({
+export const PROJECT_FRONT = styled.div.attrs({
 className:'front clicked'
 })
 `
@@ -109,7 +109,7 @@ className:'front clicked'
     justify-content:center;
     gap:.5rem;
     background: var(--homebg);
-    opacity:.5;
+    opacity:.8;
 
     & svg {
         position: absolute;
@@ -124,7 +124,7 @@ className:'front clicked'
 }
 z-index:2;
 `
-export const PROJECT_BACK = styled.section.attrs({
+export const PROJECT_BACK = styled.div.attrs({
 className:'back clicked',
 })`
 possion : relative;
@@ -136,12 +136,12 @@ possion : relative;
     height:100%;
     width:100%;
     z-index:5;
-    background:var(--homebg);
-    opacity:.6;
+    opacity:1;
+    background:transparent;
     }
 z-index:1;
 `
-export const PROJECT = styled.div`
+export const PROJECT = styled.article`
 position:relative;
 width:250px;
 height:250px;
@@ -150,7 +150,7 @@ border-radius:15px;
 perspective:1000px;
 box-shadow: 1px 1px 10px var(--spicealColor) ,-2px -2px 10px var(--spicealColor);
 transition: all 2.5s ease-in-out;
-& > section {
+& > div {
 position:absolute;
 top:0;
 left:0;
