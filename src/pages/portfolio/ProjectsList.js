@@ -25,6 +25,24 @@ export const ProjectsFilterList = [
 
 export const ProjectsList =  [
     {
+        title:'Amazone-clone',
+        web:'site',
+        tools:['react','redux','tailwind','json server'],
+        link:'https://amazon-clone-frontend-frw6.onrender.com/'
+    },
+    {
+        title:'Students-enrolled',
+        web:'site',
+        tools:['css'],
+        link:'https://ibrahemyoussef2020.github.io/Students-enrolled'
+    },
+    {
+        title:'Resort',
+        web:'site',
+        tools:['css'],
+        link:'https://ibrahemyoussef2020.github.io/Resort'
+    },
+    {
         title:'React-commerce',
         web:'site',
         tools:['react','redux','bootstrap','json server'],
@@ -39,7 +57,7 @@ export const ProjectsList =  [
     {
         title:'Tasty-E-commerce',
         web:'site',
-        tools:['js','css'],
+        tools:['css'],
         link:'https://ibrahemyoussef2020.github.io/tasty-kitchens/'   
     },
     {
@@ -73,12 +91,6 @@ export const ProjectsList =  [
         link:'https://ibrahemyoussef2020.github.io/programing-compony/comet.html'
     },
     {
-        title:'School',
-        web:'site',
-        tools:['css'],
-        link:'https://ibrahemyoussef2020.github.io/school/'
-    },
-    {
         title:'Fitness',
         web:'app',
         tools:['js'],
@@ -95,12 +107,6 @@ export const ProjectsList =  [
         web:'game',
         tools:['js',],
         link:'https://ibrahemyoussef2020.github.io/whrite-name/index.html'
-    },
-    {
-        title:'Space',
-        web:'site',
-        tools:['js observe','css'],
-        link:'https://ibrahemyoussef2020.github.io/nasa-station/space.html'
     },
     {
         title:'Counter',
