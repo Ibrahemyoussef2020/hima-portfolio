@@ -43,18 +43,6 @@ export const ProjectsList =  [
         link:'https://ibrahemyoussef2020.github.io/Resort'
     },
     {
-        title:'React-commerce',
-        web:'site',
-        tools:['react','redux','bootstrap','json server'],
-        link:'https://e-commerce-frontend-qh12.onrender.com'
-    },
-    {
-        title:'Hotel',
-        web:'site',
-        tools:['react','redux','bootstrap','json server'],
-        link:'https://hotel-frontend-nzuj.onrender.com',
-    },
-    {
         title:'Tasty-E-commerce',
         web:'site',
         tools:['css'],
