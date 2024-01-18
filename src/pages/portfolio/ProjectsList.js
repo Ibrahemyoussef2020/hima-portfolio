@@ -25,6 +25,24 @@ export const ProjectsFilterList = [
 
 export const ProjectsList =  [
     {
+        title:'car-sales-showroom',
+        web:'site',
+        tools:['Next','Typescript' ,'tailwind','json server'],
+        link:'https://car-sales-showroom.vercel.app/'
+    },
+    {
+        title:'ecommerce-amazing',
+        web:'site',
+        tools:['Next - next auth','Typescript - tailwind' ,'redux - redux persis','json server'],
+        link:'https://ecommerce-amazing.vercel.app/'
+    },
+    {
+        title:'dashboard-gym',
+        web:'site',
+        tools:['react','redux','tailwind','json server'],
+        link:'https://dashboard-gym-frontend.onrender.com/'
+    },
+    {
         title:'Amazone-clone',
         web:'site',
         tools:['react','redux','tailwind','json server'],
