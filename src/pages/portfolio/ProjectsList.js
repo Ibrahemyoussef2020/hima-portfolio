@@ -49,6 +49,18 @@ export const ProjectsList =  [
         link:'https://amazon-clone-frontend-frw6.onrender.com/'
     },
     {
+        title:'improve-your-site',
+        web:'site',
+        tools:['sass'],
+        link:'https://ibrahemyoussef2020.github.io/website-improvement'
+    },
+    {
+        title:'toggle-mode-foodHut',
+        web:'site',
+        tools:['sass'],
+        link:'https://ibrahemyoussef2020.github.io/Foodhut'
+    },
+    {
         title:'Students-enrolled',
         web:'site',
         tools:['css'],
