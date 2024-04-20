@@ -7,6 +7,8 @@ import { ButtonList,RoutsContainer,RoutsList,} from './RoutesList.js'
 import './RoutesList.css'
 import { useState } from "react"
 import { useNavigate } from "react-router-dom"
+import LARGE_BULL from "../../../components/largeBull/LargBull.js"
+import { Medium_BULL } from "../../../components/index.js"
 
 const RoutesList = (props) => {
   const {
@@ -20,11 +22,6 @@ const RoutesList = (props) => {
   const [active,setActive] = useState('home')
 
   const navigate = useNavigate()
- 
- const hundle_drop = ()=>{
-    setDropState(dropState => dropState === 'drop-list-top' ? 'drop-list-bottom' : 'drop-list-top')
-    routesTranslate ? setRoutesTranslate(false) : setRoutesTranslate(true)
- }
 
  const handle_navigation = (nav)=>{
   setDropState('drop-list-top')
@@ -41,47 +38,28 @@ const RoutesList = (props) => {
 }
 
  const routesList = [
-    {icon : <CgHomeAlt/>,content : 'home'},
-    {icon : <CgProfile/>,content : 'about'},
-    {icon : <CgEye/>, content : 'portfolio'},
-    {icon : <CgMail/>, content : 'contact'},
-    {icon : <CgLockUnlock/>,content : 'p-solving'}
+    {page :'home' ,content : 'home'},
+    {page :'about' ,content : 'about'},
+    {page :'portfolio' ,  content : 'projects'},
+    {page :'contact', content : 'contact'},
+    {page :'p-solving' ,content : 'algorithm'}
  ]
 
   return (
     <>
-    <RoutsContainer className='RoutsContainer'>
-      
-      <ButtonList onClick={hundle_drop} />
-      
+    <RoutsContainer className='RoutsContainer'>  
       <RoutsList className={`drop-list ${dropState}`}>
           {routesList.map((route,index) =>
-          <li  key={route.content}            
+          <article key={route.content}            
             className={`clicked ${active === route.content ? 'active' : ''}`}
             style={{ top: (index + 1) * 40,}}
-            onClick ={()=> handle_navigation(route.content)} 
-          >               
-            <div>
-              <span className='not-arrow icons-list'>
-                {route.icon}
-              </span>
-              <span className='arrow img-arrow spiceal'>
-                <BsBoxArrowInUpLeft/>
-              </span>
-            </div>
+            onClick ={()=> handle_navigation(route.page)} 
+          >  
+          <Medium_BULL>
+            {route.content}
+          </Medium_BULL>             
             
-            <div 
-              className={`margin-target ${routesTranslate ? 'margin-hover' : 'margin-blur'}`}
-              style={{animationDelay: routesTranslate ? `.${index + 1}s`: 0 }}
-            >
-              <span className='arrow text-arrow spiceal'>
-                <BsBoxArrowInDownRight/>
-              </span>
-              <span className='not-arrow'>
-                {route.content} 
-              </span>            
-            </div>
-          </li>)}
+          </article>)}
       </RoutsList>
     </RoutsContainer>
             

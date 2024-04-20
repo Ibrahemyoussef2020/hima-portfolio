@@ -3,9 +3,8 @@
   --bg:#333;
   --normalColor:rgb(241, 240, 240);
   --weakColor:#ddd;
-  /*--spicealColor:#14c914;*/
   --spicealColor:#25aff3;
-  --fixedTop:1rem;
+  --fixedTop:2rem !important;
   --fixedLeft:70px;
   
   /* font family */
@@ -17,8 +16,8 @@
 }
 
 .light-mode{
-  --homebg:rgb(241, 240, 240);
-  --bg:#dddddd24;
+  --homebg:#eee;
+  --bg:#fff;
   --normalColor:#111;
   --weakColor:gray;
 }
@@ -58,6 +57,7 @@ body {
   scroll-behavior: smooth;
   resize: both;
   transition: resize .3s ease-in-out;
+  background: var(--bg);
 }
 
 code {
@@ -123,6 +123,7 @@ code {
   font-size: 1.1rem;
   text-align: center;
   text-transform: uppercase;
+  line-height: 1.9;
 }
 
 .second-title::before{
@@ -146,15 +147,6 @@ code {
   padding:1px;
   perspective-origin: top right;
 }
-
-
-
-
-
-
-
-
-
 
 
 

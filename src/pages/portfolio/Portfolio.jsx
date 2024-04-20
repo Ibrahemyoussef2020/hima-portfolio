@@ -2,6 +2,8 @@ import {useState} from 'react'
 import { useSelector,useDispatch} from 'react-redux';
 
 import {BsBoxArrowUpRight} from 'react-icons/bs'
+import { IoMdLink } from "react-icons/io";
+import { FaGithub } from "react-icons/fa";
 
 import {addFilter} from '../../redux/slices/FilterProjects'
 
@@ -21,7 +23,10 @@ import{
   PROJECT,
   PROJECT_CONTAINER,
   PROJECT_FRONT,
-  PROJECT_BACK
+  PROJECT_BACK,
+  PROJECT_BODY,
+  PROJECT_FOOTER,
+  Projects
 } from './project/Project'
 
 
@@ -47,7 +52,7 @@ const Portfolio = () => {
 
 
   return (
-    <div>
+    <Projects>
       <PROJECT_FILTER_CONTAINER>
         <SELECT_BULL left={`${(toleft * 60) + toleft * 4 + 18}px`}/>
         <PROJECT_FILTER>
@@ -70,26 +75,36 @@ const Portfolio = () => {
               onMouseEnter={()=>setOpen(project.title)}
               onMouseLeave={()=>setOpen('')}
             >
-                <PROJECT_FRONT 
-                  className={open === project.title ? 'close' : 'open'}
-                >            
-                <ul>
-                  <li><h4>project : {project.title}</h4></li>
-                  <li><BsBoxArrowUpRight onClick={()=>go_to_Link(project.link)}/></li>  
-                { project.tools.map(tool =>
-                  <li key={tool}>{tool}</li>  
-                )} 
-                </ul>                 
-                </PROJECT_FRONT>
+              <PROJECT_BODY>
+                  <PROJECT_FRONT 
+                    className={`${open === project.title ? 'close' : 'open'}`}
+                  > 
+                  <a>
+                    <IoMdLink onClick={()=>go_to_Link(project.preview)}/>
+                  </a>
+                  <a>
+                    <FaGithub onClick={()=>go_to_Link(project.code)}/>
+                  </a>    
+                  {/* */}               
+                  </PROJECT_FRONT>
 
-                <PROJECT_BACK>
-                    <img src={`images/projects-img/${project.title}-front.webp`}/>
-                    <div></div>                  
-                </PROJECT_BACK>
+                  <PROJECT_BACK>
+                      <img src={`images/projects-img/${project.title}-front.webp`}/>
+                      <div></div>                  
+                  </PROJECT_BACK>
+              </PROJECT_BODY>  
+                <PROJECT_FOOTER>
+                <h4 className='project-title'>{project.title.toUpperCase().replaceAll('-' , ' ')}</h4>
+                <ul>
+                { project.tools.map((tool,index) =>
+                  <li key={index + Math.random()} className={`${typeof tool === 'string' ? 'string' : ''}`}>{tool}</li>  
+                )} 
+                </ul>  
+                </PROJECT_FOOTER>
             </PROJECT>
         )}
       </PROJECT_CONTAINER>
-    </div>
+    </Projects>
   )
 }
 

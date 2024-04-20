@@ -1,5 +1,9 @@
 import styled from "styled-components";
 
+export const Projects = styled.div`
+padding: 5rem 0 1rem;
+`
+
 /************************ Project filter *********************/ 
 
 export const SELECT_BULL = styled.div`
@@ -44,8 +48,9 @@ export const PROJECT_FILTER_CONTAINER = styled.div`
 position:relative;
 width:300px;
 height:60px;
-margin: 10rem auto 2rem;
+margin: 4rem auto 2rem;
 background: var(--spicealColor);
+z-index: 0;
 `
 
 export const PROJECT_FILTER = styled.ul`
@@ -97,38 +102,31 @@ background: var(--spicealColor);
 
 
 export const PROJECT_FRONT = styled.div.attrs({
-className:'front clicked'
+className:'front clicked abs-div'
 })
 `
-& ul{
-    height: 100%;
-    padding-top:.5rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content:center;
-    gap:.5rem;
-    background: var(--homebg);
-    opacity:.8;
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 1rem;
+z-index:1000;
+transform:translateX(-100%) !important;
+background: #111111c7;
 
-    & svg {
-        position: absolute;
-        top:1rem;
-        left: 50%;
-        transform: translatex(-50%);
-        font-size:2rem;
-        font-weight:bold;
-        fill:var(--spicealColor);
-        z-index:5;
+
+svg{
+    fill:#fff;
+    font-size:2rem;
+
+    &:hover{
+        fill:cyan;
     }
 }
-z-index:2;
 `
 export const PROJECT_BACK = styled.div.attrs({
-className:'back clicked',
+className:'back clicked abs-div',
 })`
 possion : relative;
-
 & div {
     position:absolute;
     top:0;
@@ -137,42 +135,107 @@ possion : relative;
     width:100%;
     z-index:5;
     opacity:1;
-    background:transparent;
-    }
+}
 z-index:1;
 `
+
+export const PROJECT_BODY = styled.div.attrs({
+    className:'project-body'
+})`
+    height:calc(100% - 40px);
+    position:relative;
+`
+
+export const PROJECT_FOOTER = styled.footer.attrs({
+    className:'project-body'
+})`
+    height:37px;
+    margin-top:3px;
+    display flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 .5rem;
+    background:var(--homebg);
+
+
+        > .project-title{
+            font-size:1rem;
+            font-weight:600;
+
+            @media(min-width:1024px){
+                font-size:1.1rem;
+            }
+        }
+
+        > ul{
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content:center;
+            gap:.5rem;
+            background: var(--homebg);
+            opacity:.8;
+
+            & li{
+                font-size:14px;
+                font-weight:bold;
+                color:var(--weakColor);
+                min-width:fit-content;
+
+                @media(min-width:1024px){
+                    font-size:1rem;
+                }
+            }
+    
+
+        }
+        z-index:2;
+        
+
+        /*> .project-tools{
+            display:flex;
+            align-items:center;
+            justify-content:center;
+        }*/
+`
+
 export const PROJECT = styled.article`
-position:relative;
-width:250px;
-height:250px;
-margin-top:1rem;
-border-radius:15px;
+flex:1;
+min-width:330px;
+width:90%;
+max-width:450px;
+height:280px;
+margin:1rem auto 0;
+border-radius:0;
 perspective:1000px;
 box-shadow: 1px 1px 10px var(--spicealColor) ,-2px -2px 10px var(--spicealColor);
-transition: all 2.5s ease-in-out;
-& > div {
-position:absolute;
-top:0;
-left:0;
-height:100%;
-width:100%;
-border-radius:15px;
-}
-&  .open{
-    transition: transform 1.2s ease-in-out;
-    transform:translateY(-100%);
-    transform-origin: top left;
-}
-& .close{
-    transition: transform 1.2s ease-in-out;
-    transform:translateY(0px);
-    transform-origin: top left;
-}
-& img{
-    width:100%;
-    height:100%;
-    border-radius:15px;
-}
+transition: all .5s ease-in-out;
+background:var(--bg);
+ & > .project-body{
+    & > .abs-div {
+        position:absolute;
+        top:0;
+        left:0;
+        height:100%;
+        width:100%;
+        border-radius:inherit;
+        }
+        & .open{
+            transition: transform .5s ease-in-out;
+            transform:translateX(-100%);
+            transform-origin: top right;
+        }
+        & .close{
+            transition: transform .5s ease-in-out;
+            transform:translateX(0) !important;
+            transform-origin: top right;
+        }
+        & img{
+            width:100%;
+            height:100%;
+            border-radius:inherit;
+        } 
+ }
 `
 
 
@@ -183,6 +246,7 @@ display: flex;
 justify-content: space-around;
 gap: 1rem;
 flex-wrap: wrap;
+padding: 0 1rem;
 
 & * {
     overflow:hidden !important;

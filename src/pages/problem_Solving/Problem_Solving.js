@@ -3,7 +3,7 @@ import styled from "styled-components";
     /********* Problem_Solving_  ********/
 
 export const Problem_Solving_ = styled.div`
-padding:1rem;
+padding: 3rem 0 0;
 display: flex;
 flex-direction: column;
 justify-content: center;
@@ -18,6 +18,22 @@ background:var(--homebg);
 & h3 , & .site{
     color:var(--spicealColor)
 }
+
+
+& .algorithm__intro{
+    padding:.5rem;
+}
+
+& p{
+    font-size:1rem;
+}
+
+@media (min-width:450px){
+    & p{
+        font-size:1.2rem;
+    }
+}
+
 `
 export const JS_Armies = styled.div`
 padding-top:5rem;
@@ -56,8 +72,9 @@ max-width: 500px;
 margin:1.5rem auto .5rem;
 display: flex;
 align-items: center;
-justify-content:space-around;
+justify-content: center;
 flex-wrap: wrap;
+gap:2rem;
 font-style: italic;
 font-weight:bold;
 }

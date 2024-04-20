@@ -2,8 +2,7 @@ main{
     background: var(--bg);
     height: 100%;
     min-height: 100vh; 
-    width: 100%;  
-    position: relative;
+    width: 100%;
     transition:width .3s ease-in-out;
     transform-origin: top right;
     transform-style: preserve-3d;
@@ -11,28 +10,87 @@ main{
     perspective: 1000px;
 }
 
-main .latOut{
+main .container{
+    position: relative;
+    width: 100%;
+    max-width: 1600px;
+    height: 100%; 
+    margin: auto;
+}
+
+main .layOut{
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
-    background:var(--homebg);
-    opacity: .8;
+    height: 100vh;
+    background:transparent;
     z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.latOut.drop-list-top{
+main .layOut::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:var(--homebg);
+    opacity: .7;
+    z-index: -1;
+}
+
+
+
+
+.layOut.drop-list-top{
     display: none;
 }
 
-.latOut.drop-list-bottom{
-    display: block;
+.layOut.drop-list-bottom{
+    display: flex;
 }
 
 .animeMove{
     animation: navigate 1s linear;
 }
+
+/* mode */
+
+.mode-container{
+    position: relative;
+    display: block;
+    height: 40px;
+    width: 70px;
+    border-radius: 40px;
+    margin: 1rem auto 0;
+    background-color: var(--spicealColor);
+}
+
+.mode-wheel{
+    position: absolute;
+    top: 3px;
+    bottom: 3px;
+    left: 5px;
+    width: 35px;
+    height: 35px;
+    background: var(--homebg);
+    border-radius: 50%;
+    transition: transform .2s linear;
+}
+
+.dark-mode .mode-wheel{
+    transform: translateX(0);
+}
+
+.light-mode .mode-wheel{
+    transform: translateX(25px);
+}
+
+/* keyframes */
 
 
 @keyframes navigate {

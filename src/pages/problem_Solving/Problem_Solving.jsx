@@ -22,25 +22,27 @@ const Problem_Solving = () => {
         <LARGE_BULL>jscodebox</LARGE_BULL>
     </JS_Sites>
 
-      <h3>My Problem Solving Links</h3>
-      <h4>I will coustmize this part to js proplem solving</h4>
+      <div className="algorithm__intro">
+      <h3>My Javascript Problem Solvings</h3>
+      <p>I will coustmize this part to problem solving</p>
 
       <div>
         <div>
-        <h4 className='site'>1 - codewars : </h4>
-          <a href='https://www.codewars.com/users/%20Ibrahemyoussef2020%20' 
-            target="_blank">
-            Go to : codewars/Ibrahim_Youssef <br/> <br/>
-            <img src='https://www.codewars.com/users/%20Ibrahemyoussef2020%20/badges/large' alt='codewars'/>
-          </a>
-        </div>
+            <h4 className='site'>1 - codewars : </h4>
+            <a href='https://www.codewars.com/users/%20Ibrahemyoussef2020%20' 
+              target="_blank">
+              Go to : codewars/Ibrahim_Youssef <br/> <br/>
+              <img src='https://www.codewars.com/users/%20Ibrahemyoussef2020%20/badges/large' alt='codewars'/>
+            </a>
+          </div>
 
-        <div>
-          <h4 className='site'>2 - jscodebox : </h4>
-          <a href='https://jscodebox.com/profile/Ibrahim_Youssef' 
-            target="_blank">
-            Go to : jscodebox/Ibrahim_Youssef
-          </a>
+          <div>
+            <h4 className='site'>2 - jscodebox : </h4>
+            <a href='https://jscodebox.com/profile/Ibrahim_Youssef' 
+              target="_blank">
+              Go to : jscodebox/Ibrahim_Youssef
+            </a>
+          </div>
         </div>
       </div>
     </Problem_Solving_>

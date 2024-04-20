@@ -17,8 +17,8 @@ const Home = () => {
     <HOME>
       <div className='home-container'>
       <HOME_IMG>
-          <div className='home-img-container circle'>
-            <img className='fill circle' src='images/ibrahim.jpg' alt='me'/>
+          <div className='home-img-container'>
+            <img className='fill' src='images/formal-progressive.webp' alt='me'/>
           </div>
       </HOME_IMG>
 

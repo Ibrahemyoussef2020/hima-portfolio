@@ -5,20 +5,22 @@ import styled,{keyframes} from "styled-components";
 export const HOME = styled.div.attrs({
     className:`page home`,
 })`
-padding-top:calc(var(--fixedTop) + 50px);
+padding-top:calc(var(--fixedTop) + 0px);
 margin:0 auto;
 background: var(--homebg);
 transform-origin: bottom center;
 transition:transform 1s ease-in-out;
 
 & > div{
-width:85%;    
-min-height:calc(100vh - calc(var(--fixedTop) + 50px));
-margin:0 auto;    
+width:85%;
+max-width:950px;    
+margin:0 auto;
+padding-bottom:2rem;    
 display:flex;
 justify-content:center;
 align-items:center;
 align-items:center;
+gap:1rem;
     & > *{
         flex:1
     }
@@ -29,12 +31,11 @@ align-items:center;
 }
 
 @media (max-width:800px){
-    padding-top:calc(var(--fixedTop) + 100px);
 
     & > div {
         flex-direction:column;
         justify-content:flex-start;
-        padding-bottom: 3rem;
+        padding: 3rem 0;
     }
 }
 
@@ -43,6 +44,11 @@ align-items:center;
         display:none;
     }
 }
+
+@media (min-width:1024px){
+    padding-top:200px
+}
+
 `
 
 /****** HOME Img ******/
@@ -54,13 +60,17 @@ display:flex;
 justify-content:center;
 align-items:center;
 & > div{
-    height:300px;
-    min-height:300px;
+    height:100%;
+    min-height:350px;
     width: 300px;
     min-width: 300px;
-    padding:1rem;
+    padding:6px 4px 2px;
     border:1px solid var(--homebg);
-    background:var(--bg);
+    background:var(--spicealColor);
+
+    & img{
+        min-height:350px;
+    }
 }
 `
 

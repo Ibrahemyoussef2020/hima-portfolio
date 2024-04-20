@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react'
 
-import {GiButterfly} from 'react-icons/gi'
+import { IoMdColorPalette } from "react-icons/io";
+import { BsToggleOn } from "react-icons/bs";
+
 
 import * as t from '../colors'
 
@@ -8,7 +10,7 @@ import themesColor from './themesArray'
 
 import {
 ThemesListContainer,
-ThemesListUl,
+ThemesListWrapper,
 ThemesLi,
 ModesLi
 } from './Themes'
@@ -25,39 +27,37 @@ const ThemesList = () => {
 
   },[localStorage.getItem("theme") , localStorage.getItem('mode')])
 
-  const setTargetTheme = (subject,color)=>{
-    if(subject === 'theme'){
+  const setTargetTheme = (color)=>{
       localStorage.setItem('theme',color)
       setTheme(localStorage.getItem("theme"))   
-    }else{
-      localStorage.setItem('mode',color)
-      setMode(localStorage.getItem('mode'))
-    }
+  }
+
+  const setTargetMode = ()=>{
+    const currentMode = mode === 'dark-mode' ? 'light-mode' : 'dark-mode';
+    localStorage.setItem('mode',currentMode)
+    setMode(localStorage.getItem('mode'))
   }
 
   return (
+    <>
     <ThemesListContainer>
-      <ThemesListUl>{      
-        
+      <ThemesListWrapper>{      
         themesColor
-        .filter(li=> li.color!= theme && li.color!= mode)
         .map(theme =>{
          return theme.subject === 'theme' ? 
             <ThemesLi key={theme.color}>
-            <span onClick={()=>setTargetTheme('theme',theme.color)}>
-              <GiButterfly fill={theme.color}/> 
+            <span onClick={()=>setTargetTheme(theme.color)}>
+              <IoMdColorPalette fill={theme.color}/> 
             </span> 
-            </ThemesLi> :
-
-            <ModesLi key={theme.color}>
-              <span onClick={()=>setTargetTheme('mode',theme.color)}>
-                {theme.icon}
-              </span>
-            </ModesLi>
+            </ThemesLi> : null
           })}
-      </ThemesListUl>
-
+      </ThemesListWrapper>
     </ThemesListContainer>
+    
+    <button key={theme.color} className='mode-container' onClick={()=>setTargetMode()}>
+      <span className='mode-wheel'></span>
+    </button>
+    </>
   )
 }
 

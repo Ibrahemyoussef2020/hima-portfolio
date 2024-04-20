@@ -7,23 +7,11 @@
 
 }
 
-
-li:hover .margin-target{
-    animation: listTextAnime .5s ease-in-out;   
+.layOut{
+    display: flex;
 }
-
-li:hover .not-arrow{
-    color: var(--spicealColor);
-}
-
-.margin-blur{
-    transform: translateX(5px)
-}
-
 
 /*********          animations       ***********/
-
-
 
 /*  drop list bottom */
 

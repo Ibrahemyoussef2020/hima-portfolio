@@ -4,13 +4,40 @@ import styled,{keyframes} from "styled-components";
 /*  themes list container */
 
 const ThemesListStyle = styled.div`
-position:fixed;
-top:calc(var(--fixedTop) + 10px);
-left:calc(var(--fixedLeft) + 100px);
-width:calc(100% - calc(var(--fixedLeft) + 100px));
-max-width:300px;
-transform: rotateZ(-8deg);
-z-index:900;
+position: relative;
+width:100%;
+height:70px;
+margin:3rem auto;
+border-radius:7px;
+display: flex;
+justify-content: center;
+align-items: center;
+cursor: pointer;
+transition: transform .5s ease-in-out;
+border:1px solid var(--spicealColor);
+box-shadow:0 0 8px 0px var(--spicealColor);
+background-color:var(--homebg);
+
+&:before{
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    background: var(--homebg);
+    opacity: 1;
+    z-index: -1;
+}
+
+&  svg{
+    font-size:2.5rem;
+    transition:transform .3s eas-in-out;
+    &:hover{
+        transform:scale(1.1,1.1);
+    }
+} 
+
 `
 
 export const ThemesListContainer = (props)=>{
@@ -21,26 +48,17 @@ export const ThemesListContainer = (props)=>{
 
 /* themes list ul */
 
-const fly = keyframes`
-  from {
-    transform: scale3d(1,1,1);
-  }
 
-  to {
-    transform: scale3d(.85,.85,1);
-  }
-`
-
-const ThemesListUlStyle = styled.ul`
+const ThemesListWrapperStyle = styled.ul`
 width:100%;
 display:flex;
 justify-content:space-around;
 flex-wrap:wrap; 
 `
-export const ThemesListUl= (props)=>{
-    return <ThemesListUlStyle {...props}>
+export const ThemesListWrapper= (props)=>{
+    return <ThemesListWrapperStyle {...props}>
         {props.children}
-    </ThemesListUlStyle>
+    </ThemesListWrapperStyle>
 }
 
 /* themes list ul */
@@ -55,8 +73,7 @@ export const ModesLi = (props)=>{
 }
 
 const ThemesLiStyle = styled(ModesLiStyle)`
-animation: ${fly} .1s ease-in-out;
-animation-iteration-count: infinite;            
+            
 `
 export const ThemesLi = (props)=>{
     return <ThemesLiStyle {...props} className='clicked modes' style={{color:props.color}}>

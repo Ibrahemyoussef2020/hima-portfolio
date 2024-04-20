@@ -25,117 +25,185 @@ export const ProjectsFilterList = [
 
 export const ProjectsList =  [
     {
-        title:'car-sales-showroom',
+        title:'brand',
         web:'site',
-        tools:['Next','Typescript' ,'tailwind','json server'],
-        link:'https://car-sales-showroom.vercel.app/'
+        tools:['Next','Typescript' , 'Tailwind' ,'Redux'],
+        preview:'https://brand-ecommerce-alpha.vercel.app/',
+        code:'https://github.com/Ibrahemyoussef2020/Brand-ecommerce'
     },
     {
-        title:'ecommerce-amazing',
+        title:'cars',
         web:'site',
-        tools:['Next - next auth','Typescript - tailwind' ,'redux - redux persis','json server'],
-        link:'https://ecommerce-amazing.vercel.app/'
+        tools:['Next','Typescript' ,'Tailwind'],
+        preview:'https://car-sales-showroom.vercel.app/',
+        code:'https://github.com/Ibrahemyoussef2020/car-sales-showroom'
     },
     {
-        title:'dashboard-gym',
+        title:'gym',
         web:'site',
-        tools:['react','redux','tailwind','json server'],
-        link:'https://dashboard-gym-frontend.onrender.com/'
+        tools:['React','Redux','Tailwind'],
+        preview:'https://dashboard-gym-frontend.onrender.com/',
+        code:'https://github.com/Ibrahemyoussef2020/gym'
     },
     {
         title:'Amazone-clone',
         web:'site',
-        tools:['react','redux','tailwind','json server'],
-        link:'https://amazon-clone-frontend-frw6.onrender.com/'
+        tools:['React','Redux','Tailwind'],
+        preview:'https://amazon-clone-frontend-frw6.onrender.com/',
+        code:'https://github.com/Ibrahemyoussef2020/amazon-clone-frontend'
     },
     {
-        title:'improve-your-site',
+        title:'3idak',
         web:'site',
-        tools:['sass'],
-        link:'https://ibrahemyoussef2020.github.io/website-improvement'
+        tools:['Css'],
+        preview:'https://ibrahemyoussef2020.github.io/3idak/',
+        code:'https://github.com/Ibrahemyoussef2020/3idak'
     },
     {
-        title:'toggle-mode-foodHut',
+        title:'kidsPlay',
         web:'site',
-        tools:['sass'],
-        link:'https://ibrahemyoussef2020.github.io/Foodhut'
+        tools:['Css'],
+        preview:'https://ibrahemyoussef2020.github.io/kidsPlay/',
+        code:'https://github.com/Ibrahemyoussef2020/kidsPlay'
     },
     {
-        title:'Students-enrolled',
-        web:'site',
-        tools:['css'],
-        link:'https://ibrahemyoussef2020.github.io/Students-enrolled'
+        title:'cards',
+        web:'game',
+        tools:['Javascript','Css'],
+        preview:'https://ibrahemyoussef2020.github.io/card-game/',
+        code:'https://github.com/Ibrahemyoussef2020/card-game'
     },
     {
         title:'Resort',
         web:'site',
-        tools:['css'],
-        link:'https://ibrahemyoussef2020.github.io/Resort'
+        tools:['Css'],
+        preview:'https://ibrahemyoussef2020.github.io/Resort',
+        code:'https://github.com/Ibrahemyoussef2020/Resort'
     },
     {
-        title:'Tasty-E-commerce',
+        title:'rayal-hotel',
         web:'site',
-        tools:['css'],
-        link:'https://ibrahemyoussef2020.github.io/tasty-kitchens/'   
+        tools:['Css', 'Javascript'],
+        preview:'https://ibrahemyoussef2020.github.io/Royal-hotel_tempalte/',
+        code:'https://github.com/Ibrahemyoussef2020/Royal-hotel_tempalte'
+    },
+    {
+        title:'flappy-bird',
+        web:'game',
+        tools:['Javascript','Css'],
+        preview:'https://ibrahemyoussef2020.github.io/flappy-bird/',
+        code:'https://github.com/Ibrahemyoussef2020/flappy-bird'
+    },
+    {
+        title:'improve-your-site',
+        web:'site',
+        tools:['Sass'],
+        preview:'https://ibrahemyoussef2020.github.io/website-improvement',
+        code:'https://github.com/Ibrahemyoussef2020/website-improvement'
+    },
+    {
+        title:'Taskify',
+        web:'app',
+        tools:['React','Redux'],
+        preview:'https://Taskify-dt74.onrender.com/',
+        code:'https://github.com/Ibrahemyoussef2020/TASKIFY'
+    },
+    {
+        title:'foodHut',
+        web:'site',
+        tools:['Sass'],
+        preview:'https://ibrahemyoussef2020.github.io/Foodhut',
+        code:'https://github.com/Ibrahemyoussef2020/Foodhut'
+    },
+    {
+        title:'Students',
+        web:'site',
+        tools:['Css'],
+        preview:'https://ibrahemyoussef2020.github.io/Students-enrolled',
+        code:'https://github.com/Ibrahemyoussef2020/Students-enrolled'
+    },
+    {
+        title:'Tasty',
+        web:'site',
+        tools:['Css'],
+        preview:'https://ibrahemyoussef2020.github.io/tasty-kitchens/',
+        code:'https://github.com/Ibrahemyoussef2020/tasty-kitchens'   
     },
     {
         title:'Calculator',
         web:'app',
-        tools:['js','css'],
-        link:'https://ibrahemyoussef2020.github.io/calculater/calculator.html'   
+        tools:['Javascript','Css'],
+        preview:'https://ibrahemyoussef2020.github.io/calculater/calculator.html',
+        code:'https://github.com/Ibrahemyoussef2020/calculater'   
     },
     {
         title:'Million',
         web:'game',
-        tools:['js','css'],
-        link:'https://ibrahemyoussef2020.github.io/quetions/quetions.html'
+        tools:['Javascript','Css'],
+        preview:'https://ibrahemyoussef2020.github.io/quetions/quetions.html',
+        code:'https://github.com/Ibrahemyoussef2020/quetions'
     },
     {
         title:'Dashboard',
         web:'site',
-        tools:['css','local storage'],
-        link:'https://ibrahemyoussef2020.github.io/Ibrahim-profile-dashboard'
+        tools:['Css','Javascript'],
+        preview:'https://ibrahemyoussef2020.github.io/Ibrahim-profile-dashboard',
+        code:'https://github.com/Ibrahemyoussef2020/Ibrahim-profile-dashboard'
     },
     {
         title:'Portfolio',
         web:'site',
-        tools:['css','local storage','intersection obs'],
-        link:'https://ibrahemyoussef2020.github.io/portfolio-tamplete-1'
+        tools:['Css','Javascript'],
+        preview:'https://ibrahemyoussef2020.github.io/portfolio-tamplete-1',
+        code:'https://github.com/Ibrahemyoussef2020/portfolio-tamplete-1'
+    },
+    {
+        title:'tic-Tac-toe',
+        web:'game',
+        tools:['React','Css'],
+        preview:'https://tic-Tac-toe-game-rg3v.onrender.com',
+        code:'https://github.com/Ibrahemyoussef2020/Tic-tac-toe-game'
     },
     {
         title:'Comet',
         web:'site',
-        tools:['js','css'],
-        link:'https://ibrahemyoussef2020.github.io/programing-compony/comet.html'
+        tools:['Javascript','Css'],
+        preview:'https://ibrahemyoussef2020.github.io/programing-compony/comet.html',
+        code:'https://github.com/Ibrahemyoussef2020/programing-compony'
     },
     {
         title:'Fitness',
         web:'app',
-        tools:['js'],
-        link:'https://ibrahemyoussef2020.github.io/ftness/fit.html'
+        tools:['Javascript' , 'Css'],
+        preview:'https://ibrahemyoussef2020.github.io/fitness-checkup/',
+        code:'https://github.com/Ibrahemyoussef2020/fitness-checkup'
     },
     {
-        title:'Restaurant',
+        title:'ResTaurant',
         web:'site',
-        tools:['css','bootstrap'],
-        link:'https://ibrahemyoussef2020.github.io/restaurant/restaurant.html'
+        tools:['Css','Bootstrap'],
+        preview:'https://ibrahemyoussef2020.github.io/restaurant/restaurant.html',
+        code:'https://github.com/Ibrahemyoussef2020/restaurant'
     },
     {
         title:'Know-and-Write',
         web:'game',
-        tools:['js',],
-        link:'https://ibrahemyoussef2020.github.io/whrite-name/index.html'
+        tools:['Javascript'],
+        preview:'https://ibrahemyoussef2020.github.io/whrite-name/index.html',
+        code:'https://github.com/Ibrahemyoussef2020/whrite-name'
     },
     {
         title:'Counter',
         web:'app',
-        tools:['local storage','js','css'],
-        link:'https://ibrahemyoussef2020.github.io/the-counter/the-counter.html'
+        tools:['Javascript','Css'],
+        preview:'https://ibrahemyoussef2020.github.io/the-counter/the-counter.html',
+        code:'https://github.com/Ibrahemyoussef2020/the-counter'
     },
     {
-        title:'Js-E-commerce',
+        title:'Ecommerce',
         web:'site',
-        tools:['local storage','js','css'],
-        link:'https://ibrahemyoussef2020.github.io/storage-Ecommerce/shopping.html'
+        tools:['Javascript','Css'],
+        preview:'https://ibrahemyoussef2020.github.io/storage-Ecommerce/shopping.html',
+        code:'https://github.com/Ibrahemyoussef2020/storage-Ecommerce'
     }
 ]

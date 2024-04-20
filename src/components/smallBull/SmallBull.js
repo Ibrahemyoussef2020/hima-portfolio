@@ -17,7 +17,7 @@ transition:.1s;
 & > svg{
     fill:var(--spicealColor);
     transform:scale(1.1,1.1)
-} /* translateX(-5deg) */
+} 
 &:hover{
     transform:perspective(500px)translate3d(-5px,-5px,50px)!important;
     box-shadow:0 0 15px 0px var(--spicealColor);

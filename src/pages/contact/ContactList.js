@@ -11,13 +11,13 @@ export const contactImgList = [
     {
        name:'GitHub',
        icon:<BsGithub />,
-       link:'https://api.github.com/users/Ibrahemyoussef2020/repos',
+       link:'https://github.com/Ibrahemyoussef2020',
        title:'Ibrahemyoussef2020' 
     },
     {
         name:'LinkedIn',
         icon:<FaLinkedinIn /> ,
-        link:'https://www.linkedin.com/in/ibrahim-youssef-2a65b126',
+        link:'https://www.linkedin.com/in/ibrahim-youssef-2a65b1261/',
         title:'ibrahim-youssef-2a65b126'
     }
   ]
