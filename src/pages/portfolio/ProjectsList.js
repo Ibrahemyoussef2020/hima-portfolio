@@ -102,7 +102,7 @@ export const ProjectsList =  [
         code:'https://github.com/Ibrahemyoussef2020/website-improvement'
     },
     {
-        title:'Taskify',
+        title:'taskify',
         web:'app',
         tools:['React','Redux'],
         preview:'https://Taskify-dt74.onrender.com/',
@@ -158,7 +158,7 @@ export const ProjectsList =  [
         code:'https://github.com/Ibrahemyoussef2020/portfolio-tamplete-1'
     },
     {
-        title:'tic-Tac-toe',
+        title:'tic-tac-toe',
         web:'game',
         tools:['React','Css'],
         preview:'https://tic-Tac-toe-game-rg3v.onrender.com',
@@ -179,7 +179,7 @@ export const ProjectsList =  [
         code:'https://github.com/Ibrahemyoussef2020/fitness-checkup'
     },
     {
-        title:'ResTaurant',
+        title:'Restaurant',
         web:'site',
         tools:['Css','Bootstrap'],
         preview:'https://ibrahemyoussef2020.github.io/restaurant/restaurant.html',
